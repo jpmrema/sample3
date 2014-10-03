@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+xmlns:gap = "http://phonegap.com/ns/1.0"
+id        = "com.GroupProject.HabariApp"
+version   = "1.0.0">
+	<name>Tarumbeta Letu</name>
+	<description>Programu ya kutangaza habari.</description>
+	<author href="" email="hellojay9@gmail.com">Group Project</author>  
+	<feature name="http://api.phonegap.com/1.0/device" />
+	<preference name="phonegap-version" 		value="3.5.0" />
+	<preference name="orientation"      		value="default" />
+	<preference name="target-device"    		value="universal" />
+	<preference name="fullscreen"       		value="true" />
+	<preference name="exit-on-suspend" 			value="true" />
+	<preference name="android-installLocation" 	value="preferExternal" />
+	
+	<icon src="vuvuzela.png" />
+	<gap:splash src="splash.png" />
+	
+	<gap:plugin name="com.phonegap.plugin.statusbar" />
+
+
+
+
+
+
+</widget>

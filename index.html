@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Tarumbeta Letu</title>
+		<!-- Phonegap JS file -->
+		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+		<!-- Jquery Libraries -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+		<!-- My personal resources -->
+		<!-- Cascading Style Sheets-->
+		
+		<link rel="stylesheet" href="css/style.css">
+		<!-- Javascript -->
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script src="http://www.google.com/uds/solutions/dynamicfeed/gfdynamicfeedcontrol.js"
+type="text/javascript"></script>
+
+<style type="text/css">
+@import url("http://www.google.com/uds/solutions/dynamicfeed/gfdynamicfeedcontrol.css");
+
+#feedControl {
+margin-top : 10px;
+margin-left: auto;
+margin-right: auto;
+width : 440px;
+font-size: 12px;
+color: #9CADD0;
+}
+</style>
+<script type="text/javascript">
+function load() {
+var feed ="http://feeds.bbci.co.uk/news/world/rss.xml";
+
+new GFdynamicFeedControl(feed, "feedControl");
+
+}
+google.load("feeds", "1");
+google.setOnLoadCallback(load);
+</script>
+	</head>
+	<body>
+		<!-- Start of first page I -->
+		<div data-role="page" id="page1" data-theme="a">
+			<div data-role="header">
+			
+				<h1>Tarumbeta Letu</h1>
+				<a href="#refresh"  data-icon="refresh" class="ui-btn-right" data-theme="a" data-transition="fade">Refresh</a>
+				
+			</div>
+			<!-- /header -->
+			<div data-role="content">
+				<div id="body">
+									<div id="feedControl">Loading...</div>
+				</div>
+			</div>
+			<div data-role="content">
+				<ul data-role="listview">
+					<li><h4>Habari mbalimbali za:</h4></li>
+				</ul>
+			</div>
+			<div data-role="content">
+				<ul data-role="listview" data-inset="true" data-theme="A">
+					<li>
+						<a href="#siasa"><img src="image.png"  alt="pic" />Siasa</a>
+					</li>
+					<li>
+						<a href="#Biashara" data-transition="slide" class="menu"><img src="image.png"  alt="pic" />Biashara</a>
+					</li>
+					<li>
+						<a href="#Michezo" data-transition="slide" class="menu"><img src="image.png"  alt="pic" />Michezo</a>
+					</li>
+					<li>
+						<a href="#Katiba" data-transition="slide" class="menu"><img src="image.png"  alt="pic" />Katiba Mpya</a>
+					</li>
+					
+				</ul>
+			</div>
+			
+		</div>
+		<!-- /page -->
+		
+		<!-- Start of Siasa page-->
+		<div data-role="page" id="Siasa">
+			<div data-role="header">
+				<a href="#page1" class="ui-btn-left" data-transition="slide" data-direction="reverse"  data-icon="home">Home</a>
+				<h1>Siasa</h1>
+			</div>
+			<!-- /header -->
+			<div data-role="content">
+				Hello World!	Hello World!Hello World!Hello World!
+			</div>
+			
+			
+			<!-- /footer -->
+		</div>
+		<!-- /page -->
+		<!-- START OF Biashara PAGE -->
+		<div data-role="page" id="Biashara">
+			<div data-theme="a" data-role="header">
+				<a href="#page1" class="ui-btn-left" data-transition="slide" data-direction="reverse"  data-icon="home">Home</a>
+				<a href="http://feeds.reuters.com/Reuters/PoliticsNews"  data-icon="refresh" class="ui-btn-right" data-theme="a" data-transition="fade">Refresh</a>
+				<h3>Biashara</h3>
+			</div>
+			<div data-role="content" >
+				
+					
+      
+						       
+      						<div id="body">
+									<div id="feedControl">Loading...</div>
+							</div>
+    					
+				
+			</div>
+			
+		</div>
+		<!-- END OF PAGE -->
+		<!-- START OF Michezo PAGE -->
+		<div data-role="page" id="Michezo">
+			<div data-theme="a" data-role="header">
+				<a href="#page1" class="ui-btn-left" data-transition="slide" data-direction="reverse"  data-icon="home">Home</a>
+				<h3>Michezo</h3>
+			</div>
+			<div data-role="content">
+				<div style="text-align:center">
+					<h1>Michezo</h1>
+				</div>
+			</div>
+		</div>
+		<!-- END OF PAGE -->
+		<!-- START OF Michezo PAGE -->
+		<div data-role="page" id="Katiba">
+			<div data-theme="a" data-role="header">
+				<a href="#page1" class="ui-btn-left" data-transition="slide" data-direction="reverse"  data-icon="home">Home</a>
+				<h3>Katiba</h3>
+			</div>
+			<div data-role="content">
+				<div style="text-align:center">
+					<h1>Katiba Mpya</h1>
+				</div>
+			</div>
+		</div>
+		<!-- END OF PAGE -->
+	</body>
+</html>
