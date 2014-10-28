@@ -7,9 +7,11 @@
 		<!-- Phonegap JS file -->
 		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 		<!-- Jquery Libraries -->
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
-		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+		<link rel="stylesheet" href="css-js/jquery.mobile-1.0a2.min.css" />	
+<script src="css-js/jquery-1.4.4.min.js"></script>
+<script src="css-js/jquery.mobile-1.0a2.min.js"></script>
+<script src="css-js/jquery.ba-dotimeout.js"></script> 
+<script src="css-js/jquery.dst.js"></script> 
 		<!-- My personal resources -->
 		<!-- Cascading Style Sheets-->
 		
@@ -23,19 +25,23 @@ type="text/javascript"></script>
 @import url("http://www.google.com/uds/solutions/dynamicfeed/gfdynamicfeedcontrol.css");
 
 #feedControl {
-margin-top : 10px;
-margin-left: auto;
-margin-right: auto;
-width : 440px;
-font-size: 12px;
-color: #9CADD0;
+
 }
+
 </style>
 <script type="text/javascript">
 function load() {
-var feed ="http://feeds.bbci.co.uk/news/world/rss.xml";
+var feed ="http://mobile.reuters.com/reuters/rss/WOR.xml";
+var feed1 ="http://mobile.reuters.com/reuters/rss/BUS.xml";
+var feed2 ="http://mobile.reuters.com/reuters/rss/SPO.xml";
+var feed3 ="http://mobile.reuters.com/reuters/rss/POL.xml";
+
+
 
 new GFdynamicFeedControl(feed, "feedControl");
+new GFdynamicFeedControl(feed1, "feedControl1", {numResults:100});
+new GFdynamicFeedControl(feed2, "feedControl2", {numResults:100});
+new GFdynamicFeedControl(feed3, "feedControl3", {numResults:100});
 
 }
 google.load("feeds", "1");
@@ -44,65 +50,75 @@ google.setOnLoadCallback(load);
 	</head>
 	<body>
 		<!-- Start of first page I -->
-		<div data-role="page" id="page1" data-theme="a">
+		<div data-role="page" id="page1" data-theme="b">
 			<div data-role="header">
 			
 				<h1>Tarumbeta Letu</h1>
-				<a href="#refresh"  data-icon="refresh" class="ui-btn-right" data-theme="a" data-transition="fade">Refresh</a>
+				<a href="#" data-theme="a" class="ui-btn-left" data-transition="slide" data-direction=""  data-icon="home">Home</a>
 				
 			</div>
 			<!-- /header -->
 			<div data-role="content">
 				<div id="body">
-									<div id="feedControl">Loading...</div>
+									<div id="feedControl">Inapakia...</div>
 				</div>
 			</div>
 			<div data-role="content">
 				<ul data-role="listview">
-					<li><h4>Habari mbalimbali za:</h4></li>
+					<li><h4>STORY MOTO ZA LEO:</h4></li>
 				</ul>
 			</div>
+			
 			<div data-role="content">
-				<ul data-role="listview" data-inset="true" data-theme="A">
+				<ul data-role="listview" data-inset="true" data-theme="b">
 					<li>
-						<a href="#siasa"><img src="image.png"  alt="pic" />Siasa</a>
+						<a href="#Siasa" data-transition="slide" class="menu"><img src="images/siasa.png"  alt="pic" />Siasa</a>
 					</li>
 					<li>
-						<a href="#Biashara" data-transition="slide" class="menu"><img src="image.png"  alt="pic" />Biashara</a>
+						<a href="#Biashara" data-transition="slide" class="menu"><img src="images/biashara.png"  alt="pic" />Biashara</a>
 					</li>
 					<li>
-						<a href="#Michezo" data-transition="slide" class="menu"><img src="image.png"  alt="pic" />Michezo</a>
+						<a href="#Michezo" data-transition="slide" class="menu"><img src="images/okwi.png"  alt="pic" />Michezo</a>
 					</li>
 					<li>
-						<a href="#Katiba" data-transition="slide" class="menu"><img src="image.png"  alt="pic" />Katiba Mpya</a>
+						<a href="#Katiba" data-transition="slide" class="menu"><img src="images/katibampya.png"  alt="pic" />Katiba Mpya</a>
 					</li>
 					
 				</ul>
+			</div>
+			
+			<div data-role="footer">
+				<h4>&copy; IFM 2014 RSS Reader Project</h4>
 			</div>
 			
 		</div>
 		<!-- /page -->
 		
 		<!-- Start of Siasa page-->
-		<div data-role="page" id="Siasa">
+		<div data-role="page" id="Siasa" data-theme="b">
 			<div data-role="header">
-				<a href="#page1" class="ui-btn-left" data-transition="slide" data-direction="reverse"  data-icon="home">Home</a>
+				<a href="#page1" data-theme="a" class="ui-btn-left" data-transition="slide" data-direction="reverse"  data-icon="arrow-l">Home</a>
 				<h1>Siasa</h1>
 			</div>
 			<!-- /header -->
 			<div data-role="content">
-				Hello World!	Hello World!Hello World!Hello World!
+				<div id="body">
+									<div id="feedControl3">Inapakia...</div>
+				</div>
 			</div>
 			
 			
 			<!-- /footer -->
+			<div data-role="footer">
+				<h4>&copy; 2014 IFM RSS Reader Project</h4>
+			</div>
 		</div>
 		<!-- /page -->
 		<!-- START OF Biashara PAGE -->
-		<div data-role="page" id="Biashara">
-			<div data-theme="a" data-role="header">
-				<a href="#page1" class="ui-btn-left" data-transition="slide" data-direction="reverse"  data-icon="home">Home</a>
-				<a href="http://feeds.reuters.com/Reuters/PoliticsNews"  data-icon="refresh" class="ui-btn-right" data-theme="a" data-transition="fade">Refresh</a>
+		<div data-role="page" id="Biashara" data-theme="b">
+			<div data-theme="b" data-role="header">
+				<a href="#page1" data-theme="a" class="ui-btn-left" data-transition="slide" data-direction="reverse"  data-icon="arrow-l">Home</a>
+				
 				<h3>Biashara</h3>
 			</div>
 			<div data-role="content" >
@@ -111,37 +127,47 @@ google.setOnLoadCallback(load);
       
 						       
       						<div id="body">
-									<div id="feedControl">Loading...</div>
+									<div id="feedControl1">Inapakia...</div>
+									
 							</div>
     					
 				
+			</div>
+			<div data-role="footer">
+				<h4>&copy; IFM 2014 RSS Reader Project</h4>
 			</div>
 			
 		</div>
 		<!-- END OF PAGE -->
 		<!-- START OF Michezo PAGE -->
-		<div data-role="page" id="Michezo">
-			<div data-theme="a" data-role="header">
-				<a href="#page1" class="ui-btn-left" data-transition="slide" data-direction="reverse"  data-icon="home">Home</a>
+		<div data-role="page" id="Michezo" data-theme="b">
+			<div data-theme="b" data-role="header">
+				<a href="#page1"  data-theme="a" class="ui-btn-left" data-transition="flip" data-direction="reverse"  data-icon="arrow-l">Home</a>
 				<h3>Michezo</h3>
 			</div>
 			<div data-role="content">
-				<div style="text-align:center">
-					<h1>Michezo</h1>
+				<div id="body">
+					<div id="feedControl2">Inapakia...</div>
 				</div>
+			</div>
+			<div data-role="footer">
+				<h4>&copy; IFM 2014 RSS Reader Project</h4>
 			</div>
 		</div>
 		<!-- END OF PAGE -->
-		<!-- START OF Michezo PAGE -->
-		<div data-role="page" id="Katiba">
-			<div data-theme="a" data-role="header">
-				<a href="#page1" class="ui-btn-left" data-transition="slide" data-direction="reverse"  data-icon="home">Home</a>
+		<!-- START OF katiba mpya PAGE -->
+		<div data-role="page" id="Katiba" data-theme="b">
+			<div data-theme="b" data-role="header">
+				<a href="#page1" data-theme="a" class="ui-btn-left" data-transition="slide" data-direction="reverse"  data-icon="arrow-l">Home</a>
 				<h3>Katiba</h3>
 			</div>
 			<div data-role="content">
 				<div style="text-align:center">
 					<h1>Katiba Mpya</h1>
 				</div>
+			</div>
+			<div data-role="footer">
+				<h4>&copy; IFM 2014 RSS Reader Project</h4>
 			</div>
 		</div>
 		<!-- END OF PAGE -->
