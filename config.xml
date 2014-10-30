@@ -19,7 +19,7 @@ version   = "1.0.0">
 	<preference name="PopupBlocker" 			value="enable"/>
 	<preference name="WebSecurity" value="disable"/>
 	
-	<icon src="images/tarumbetaletu.png" />
+	<icon src="images/vuvuzela.png" />
 	<gap:splash src="images/splash.png" />
 	
 	<gap:plugin name="com.phonegap.plugin.statusbar" />
