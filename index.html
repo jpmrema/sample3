@@ -35,6 +35,7 @@ var feed ="http://mobile.reuters.com/reuters/rss/WOR.xml";
 var feed1 ="http://mobile.reuters.com/reuters/rss/BUS.xml";
 var feed2 ="http://mobile.reuters.com/reuters/rss/SPO.xml";
 var feed3 ="http://mobile.reuters.com/reuters/rss/POL.xml";
+var feed4 ="http://mobile.reuters.com/reuters/rss/HLT.xml";
 
 
 
@@ -42,6 +43,8 @@ new GFdynamicFeedControl(feed, "feedControl");
 new GFdynamicFeedControl(feed1, "feedControl1", {numResults:100});
 new GFdynamicFeedControl(feed2, "feedControl2", {numResults:100});
 new GFdynamicFeedControl(feed3, "feedControl3", {numResults:100});
+new GFdynamicFeedControl(feed4, "feedControl4", {numResults:100});
+
 
 }
 google.load("feeds", "1");
@@ -60,7 +63,21 @@ google.setOnLoadCallback(load);
 			<!-- /header -->
 			<div data-role="content">
 				<div id="body">
-									<div id="feedControl">Inapakia...</div>
+									<div id="feedControl">
+										
+									<div align="center">
+										<h4>Please check your internet connection...</h4>
+										<img id="spin" src="images/wait.gif" alt="pic"/>
+									</div>	
+									
+									
+									</div>
+										
+										
+										
+										
+										
+				
 				</div>
 			</div>
 			<div data-role="content">
@@ -81,7 +98,7 @@ google.setOnLoadCallback(load);
 						<a href="#Michezo" data-transition="slide" class="menu"><img src="images/okwi.png"  alt="pic" />Michezo</a>
 					</li>
 					<li>
-						<a href="#Katiba" data-transition="slide" class="menu"><img src="images/katibampya.png"  alt="pic" />Katiba Mpya</a>
+						<a href="#Afya" data-transition="slide" class="menu"><img src="images/afya.png"  alt="pic" />Afya</a>
 					</li>
 					
 				</ul>
@@ -103,7 +120,13 @@ google.setOnLoadCallback(load);
 			<!-- /header -->
 			<div data-role="content">
 				<div id="body">
-									<div id="feedControl3">Inapakia...</div>
+									<div align="center"><img id="a" src="images/siasa.gif" alt="pic" max-width="100%"/></div>
+									<div id="feedControl3">
+									<div align="center">
+										<h4>Please check your internet connection...</h4>
+										<img id="spin" src="images/wait.gif" alt="pic"/>
+									</div>	
+									</div>
 				</div>
 			</div>
 			
@@ -127,7 +150,13 @@ google.setOnLoadCallback(load);
       
 						       
       						<div id="body">
-									<div id="feedControl1">Inapakia...</div>
+      								<div align="center"><img id="b" src="images/biashara.gif" alt="pic"/></div>
+									<div id="feedControl1">
+									<div align="center">
+										<h4>Please check your internet connection...</h4>
+										<img id="spin" src="images/wait.gif" alt="pic"/>
+									</div>	
+									</div>
 									
 							</div>
     					
@@ -147,7 +176,13 @@ google.setOnLoadCallback(load);
 			</div>
 			<div data-role="content">
 				<div id="body">
-					<div id="feedControl2">Inapakia...</div>
+					<div align="center"><img id="c" src="images/michezo.gif" alt="pic"/></div>
+					<div id="feedControl2">
+						<div align="center">
+										<h4>Please check your internet connection...</h4>
+										<img id="spin" src="images/wait.gif" alt="pic"/>
+						</div>	
+					</div>
 				</div>
 			</div>
 			<div data-role="footer">
@@ -155,15 +190,21 @@ google.setOnLoadCallback(load);
 			</div>
 		</div>
 		<!-- END OF PAGE -->
-		<!-- START OF katiba mpya PAGE -->
-		<div data-role="page" id="Katiba" data-theme="b">
+		<!-- START OF Afya PAGE -->
+		<div data-role="page" id="Afya" data-theme="b">
 			<div data-theme="b" data-role="header">
 				<a href="#page1" data-theme="a" class="ui-btn-left" data-transition="slide" data-direction="reverse"  data-icon="arrow-l">Home</a>
-				<h3>Katiba</h3>
+				<h3>Afya</h3>
 			</div>
 			<div data-role="content">
-				<div style="text-align:center">
-					<h1>Katiba Mpya</h1>
+				<div id="body">
+					<div align="center"><img id="d" src="images/afya.gif" alt="pic"/></div>
+					<div id="feedControl4">
+						<div align="center">
+										<h4>Please check your internet connection...</h4>
+										<img id="spin" src="images/wait.gif" alt="pic"/>
+						</div>	
+					</div>
 				</div>
 			</div>
 			<div data-role="footer">
