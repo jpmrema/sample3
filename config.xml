@@ -3,7 +3,7 @@
 xmlns:gap = "http://phonegap.com/ns/1.0"
 id        = "com.GroupProject.HabariApp"
 version   = "1.0.0">
-	<name>Tarumbeta Letu</name>
+	<name>Tarumbeta</name>
 	<description>Kiungo cha RSS cha kupata habari.</description>
 	<author href="" email="hellojay9@gmail.com">Group Project</author> 
 	<content src="index.html" />
