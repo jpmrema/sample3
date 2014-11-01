@@ -14,6 +14,9 @@ version   = "1.0.0">
 	<preference name="fullscreen"       		value="true" />
 	<preference name="exit-on-suspend" 			value="true" />
 	<preference name="android-installLocation" 	value="preferExternal" />
+	<preference name="ChildBrowser" 			   value="disable"/>
+    <preference name="PopupBlocker" 			   value="enable"/>
+	<preference name="WebSecurity" 			   value="disable"/>
 	
 	<icon src="images/appicon.png" />
 	<gap:splash src="images/splash.png" />
