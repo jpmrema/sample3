@@ -15,8 +15,8 @@ version   = "1.0.0">
 	<preference name="exit-on-suspend" 			value="true" />
 	<preference name="android-installLocation" 	value="preferExternal" />
 	
-	<icon src="res/appicon.png" />
-	<gap:splash src="res/splash.png" />
+	<icon src="images/appicon.png" />
+	<gap:splash src="images/splash.png" />
 	
 	<gap:plugin name="com.phonegap.plugin.statusbar" />
 
